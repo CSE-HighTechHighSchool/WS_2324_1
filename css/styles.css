@@ -1,0 +1,88 @@
+/* ---------------- Class -----------------*/
+
+.nb-background-color {  /*navbar backgroudn color */
+    background-color: rgb(97, 181, 147);
+}
+
+.nbMenuItem {       /*navbar link text properties*/
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;;
+}
+
+.about {
+    width: 50%;
+    margin: auto;
+}
+
+.about-team {
+    color:  #203d59;
+}
+
+.authors {
+    background-color:  #ffffff;
+}
+
+.showcase {
+    background-color: #8cc6ae;
+}
+
+.overview {
+    background-color: #ffffff;
+}
+
+.ovPadLeft {
+    padding-left: 20px;
+}
+
+.ovPadRight {
+    padding-right: 20px;
+}
+
+.icon-white {
+    color: #ffffffff;
+}
+.procedure {
+    background-color:  #ffffff;
+    padding: 1px;
+}
+
+#procedureimage {
+    max-width: 400px;
+}
+
+.howTo {
+    font-size: 20px;
+}
+
+.footer {  /* footer background*/
+    background-color: rgb(97, 181, 147);
+}
+
+/* ---------------------- ID ---------------------- */
+
+
+/* ----------------- Underline Animation CSS -----------------*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    /*color: #0087ca;*/
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #eae6e6;
+    /*transform-origin: bottom right;*/
+    transition: transform 0.35s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    /*transform-origin: bottom left;*/
+}
