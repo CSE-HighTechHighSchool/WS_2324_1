@@ -1,5 +1,4 @@
-/* ---------------- Class -----------------*/
-
+/* footer*/
 .nb-background-color {  /*navbar backgroudn color */
     background-color: rgb(97, 181, 147);
 }
@@ -10,54 +9,15 @@
     margin-right: 10px;;
 }
 
-.about {
-    width: 50%;
-    margin: auto;
+.showcase{
+    background-color: #cbeae0;
+    padding: 200px;    
 }
 
-.about-team {
-    color:  #203d59;
+.container{
+    color: black;
 }
 
-.authors {
-    background-color:  #ffffff;
-}
-
-.showcase {
-    background-color: #8cc6ae;
-}
-
-.overview {
-    background-color: #ffffff;
-}
-
-.ovPadLeft {
-    padding-left: 20px;
-}
-
-.ovPadRight {
-    padding-right: 20px;
-}
-
-.icon-white {
-    color: #ffffffff;
-}
-.procedure {
-    background-color:  #ffffff;
-    padding: 1px;
-}
-
-#procedureimage {
-    max-width: 400px;
-}
-
-.howTo {
-    font-size: 20px;
-}
-
-.footer {  /* footer background*/
-    background-color: rgb(97, 181, 147);
-}
 
 /* ---------------------- ID ---------------------- */
 
