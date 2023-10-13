@@ -1,6 +1,7 @@
-/* footer*/
-.nb-background-color {  /*navbar backgroudn color */
-    background-color: rgb(97, 181, 147);
+/*Navbar*/
+.nb-background-color {  /*navbar background image */
+    background-image: url("https://live.staticflickr.com/7377/12180731193_e44052fe2c_b.jpg");
+    background-size: cover;
 }
 
 .nbMenuItem {       /*navbar link text properties*/
@@ -9,6 +10,7 @@
     margin-right: 10px;;
 }
 
+/*Index page*/
 .showcase{
     background-color: #cbeae0;
     padding: 200px;    
@@ -18,10 +20,16 @@
     color: black;
 }
 
+<<<<<<< Updated upstream
 .footer{
     background-color: #acc6aa;
 }
 
+=======
+/*Terminology Page*/
+
+/*Meteorologists Page*/
+>>>>>>> Stashed changes
 
 /* ---------------------- ID ---------------------- */
 
