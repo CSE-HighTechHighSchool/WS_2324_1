@@ -12,8 +12,10 @@
 
 /*Index page*/
 .showcase{
-    background-color: #cbeae0;
+    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-03/230328-supercell-tornado-kansas-file-mn-1000-3bf68b.jpg");
+    background-size: cover;
     padding: 200px;    
+    zoom: 185%;
 }
 
 .container{
