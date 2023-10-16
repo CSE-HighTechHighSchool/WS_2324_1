@@ -1,7 +1,6 @@
 /*Navbar*/
-.nb-background-color {  /*navbar background image */
-    background-image: url("https://live.staticflickr.com/7377/12180731193_e44052fe2c_b.jpg");
-    background-size: cover;
+.nb-background-color {  /*navbar background color */
+    background-color: rgba(124, 124, 124, 1)
 }
 
 .nbMenuItem {       /*navbar link text properties*/
@@ -18,20 +17,21 @@
     zoom: 185%;
 }
 
+.nb-index-background-color {  /*index navbar background image */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(33, 12, 55, 0.403)), url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
+    background-size: cover;
+    height: 750px;
+    align-items: baseline;
+}
+
 .container{
     color: black;
 }
 
-<<<<<<< Updated upstream
 .footer{
     background-color: #acc6aa;
 }
 
-=======
-/*Terminology Page*/
-
-/*Meteorologists Page*/
->>>>>>> Stashed changes
 
 /* ---------------------- ID ---------------------- */
 
