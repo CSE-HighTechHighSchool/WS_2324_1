@@ -10,24 +10,24 @@
 }
 
 /*Index page*/
-.showcase{
-    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-03/230328-supercell-tornado-kansas-file-mn-1000-3bf68b.jpg");
-    background-size: cover;
-    padding: 200px;    
-    zoom: 185%;
-}
-
 .nb-index-background-color {  /*index navbar background image */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(33, 12, 55, 0.403)), url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
     background-size: cover;
-    height: 750px;
+    height: 100vh;
     align-items: baseline;
 }
+
+.content{
+    height: 500px;
+}
+
+/* All Page */
 
 .container{
     color: black;
 }
 
+/* Foorter */
 .footer{
     background-color: #acc6aa;
 }
