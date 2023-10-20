@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
+
 /*Navbar*/
 .nb-background-color {  /*navbar background color */
     background-color: rgba(124, 124, 124, 1)
@@ -10,29 +13,62 @@
 }
 
 /*Index page*/
+.showcase{
+    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-03/230328-supercell-tornado-kansas-file-mn-1000-3bf68b.jpg");
+    background-size: cover;
+    padding: 200px;    
+    zoom: 185%;
+    font-family: 'Londrina Shadow', sans-serif;
+}
+
 .nb-index-background-color {  /*index navbar background image */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(33, 12, 55, 0.403)), url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
     background-size: cover;
-    height: 100vh;
+    height: 750px;
     align-items: baseline;
 }
-
-.content{
-    height: 500px;
-}
-
-/* All Page */
 
 .container{
     color: black;
 }
 
-/* Foorter */
 .footer{
     background-color: #acc6aa;
 }
 
+body {
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+    font-family: $firaSans;
+    
+}
 
+.zoomable-image {
+    max-width: 200px; /* Set the initial width of the image */
+    zoom: 1;
+  }
+
+  /* Define the hover effect */
+.zoomable-image:hover {
+    max-width: 200px;
+    transition: transform 0.3s; /* Add a smooth transition */
+    transform: scale(1.2) /* Scale the image to 120% on hover */
+  }
+
+.card-hover {
+    $root: &;
+    width: 360px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 32px -10px rgba(0,0,0,0.08);
+    padding-top: 50px;
+    padding-left: 10px;
+}
 /* ---------------------- ID ---------------------- */
 
 
