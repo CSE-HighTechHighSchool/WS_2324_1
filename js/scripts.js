@@ -1,7 +1,6 @@
 const apiEndpoint = "https://api.weather.gov/points/40.3291,-74.1240"; // Lincroft's coordinates
 const accessToken = "bLixBffiQkvdoZWKWCpvCZGraiuwMWbC"; // Access Token
 const temperatureElement = document.getElementById("temperature");
-console.log(temperatureElement);
 const headers = {
   "Authorization": `Bearer ${accessToken}`
 };
@@ -13,7 +12,7 @@ fetch(apiEndpoint)
     return response.json();
   })
   .then(data => {
-    fetch(data.properties.forecast)
+    fetch(data.properties.forecastHourly)
     .then(res => res.json())
     .then(forecast => {
       const temperature = forecast.properties.periods[0].temperature;
