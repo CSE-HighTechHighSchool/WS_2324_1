@@ -36,6 +36,23 @@
     background-color: #acc6aa;
 }
 
+.ovPadLeft {
+    padding-left: 75px;
+}
+.ovPadRight {
+    padding-right: 75px;
+}
+.container {
+    padding-left: 125px;
+    padding-right: 125px;
+}
+.vr {
+    margin-left: auto;
+    opacity: 5%;
+    margin-right: auto;
+}
+
+
 body {
     -webkit-text-size-adjust: 100%;
     font-variant-ligatures: none;
