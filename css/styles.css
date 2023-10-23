@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Playfair+Display:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
+@import "compass/css3";
 
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 /*Navbar*/
 .nb-background-color {  /*navbar background color */
     background-color: rgba(124, 124, 124, 1)
@@ -56,7 +58,7 @@ body {
 }
 
 #cards {
-	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+    padding: 30px;
 	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
 }
 
@@ -72,14 +74,10 @@ body {
 	--index: 3;
 }
 
-#card_4 {
-	--index: 4;
-}
-
 .card {
 	position: sticky;
 	top: 0;
-	padding-top: calc(var(--index) * var(--card-top-offset));
+	padding-top: 10px;
 }
 
 @supports (animation-timeline: works) {
@@ -136,7 +134,7 @@ body {
 }
 
 body {
-	background: rgb(58 29 43);
+	background: #acc6aa;
 	color: rgb(255, 255, 255);
 	text-align: center;
 
@@ -241,6 +239,82 @@ aside {
 aside p {
 	margin-bottom: 1em;
 }
+
+$clouds: 
+  ("img/cloud_1.jpeg" 1000px 20s),
+  ("img/cloud_2.jpeg" 1000px 15s),
+  ("img/cloud_3.jpeg" 1579px 17s);
+
+  @for $i from 1 through length($clouds) {
+  
+    $item     : nth($clouds, $i);
+    $path     : nth($item, 1);
+    $width    : nth($item, 2);
+    $duration : nth($item, 3);
+    
+    @keyframes clouds-loop-#{$i} {
+      to { background-position: -$width 0; }
+    }
+    
+    .clouds-#{$i} {
+      background-image: url($path);
+      animation: clouds-loop-#{$i} $duration infinite linear;
+    }
+  }
+  
+  // =====================================================
+  
+  html, body {
+    font-family: 'Oswald', sans-serif;
+    height:  100%;
+    padding: 0;
+    margin:  0;
+  }
+  
+  body {
+    @include background(linear-gradient(#333, #000));
+    text-align:     center;
+    vertical-align: middle;
+    
+    a {
+      $color: #b8956b;
+      @include inline-block;
+      position:        relative;
+      text-align:      right;
+      text-decoration: none;
+      font-weight:     normal;
+      font-size:       1.5em;
+      line-height:     1.5em;
+      margin:          0;
+      color:           $color;
+      text-shadow:     0 -1px 0 rgba(lighten($color, 40%), 0.6),
+                       0 2px 3px #000;
+      
+      span { display: block; }
+    }
+  }
+    
+  .clouds {
+    @include opacity(0.4);
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    top:      0;
+    left:     0;
+    right:    0;
+    height:   100%;
+  }  
+  
+  .clouds-1,
+  .clouds-2,
+  .clouds-3 {
+    background-repeat: repeat-x;
+    position: absolute;
+    top:      0;
+    right:    0;
+    left:     0;
+    height:   500px;
+  }
 /* ---------------------- ID ---------------------- */
 
 
