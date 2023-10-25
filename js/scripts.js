@@ -4,6 +4,8 @@ const temperatureElement = document.getElementById("temperature");
 const headers = {
   "Authorization": `Bearer ${accessToken}`
 };
+
+
 fetch(apiEndpoint)
   .then(response => {
     if (!response.ok) {

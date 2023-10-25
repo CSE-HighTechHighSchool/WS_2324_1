@@ -66,11 +66,12 @@ body {
     
 }
 
+/* -----------Meteorologist Page CSS------------------- */
 :root {
 	--card-height: 40vw;
 	--card-margin: 4vw;
 	--card-top-offset: 1em;
-	--numcards: 4;
+	--numcards: 3;
 	--outline-width: 0px;
 }
 
@@ -94,7 +95,7 @@ body {
 .card {
 	position: sticky;
 	top: 0;
-	padding-top: 10px;
+	padding: 20px 20px 20px 20px;
 }
 
 @supports (animation-timeline: works) {
@@ -147,11 +148,11 @@ body {
 * { /* Poor Man's Reset */
 	box-sizing: border-box;
 	margin: 0;
-	padding: 0;
+	padding: 2;
 }
 
 body {
-	background: #acc6aa;
+	background: #3f7482;
 	color: rgb(255, 255, 255);
 	text-align: center;
 
@@ -171,24 +172,17 @@ header {
 }
 
 #cards {
-	list-style: none;
-	outline: calc(var(--outline-width) * 10) solid blue;
-	
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(var(--numcards), var(--card-height));
 	gap: var(--card-margin);
 }
 
-.card {
-	outline: var(--outline-width) solid hotpink;
-}
-
 .card__content {
 	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
 	background: rgb(255, 255, 255);
 	color: rgb(10, 5, 7);
-	border-radius: 1em;
+	border-radius: 0.5em;
 	overflow: hidden;
 
 	display: grid;
@@ -197,7 +191,6 @@ header {
 	grid-template-rows: auto;
 
 	align-items: stretch;
-	outline: var(--outline-width) solid lime;
 }
 
 .card__content > div {
@@ -207,13 +200,13 @@ header {
 	text-align: left;
 
 	display: grid;
-	gap: 1em;
 	place-items: start;
 }
 
 .card__content > figure {
 	grid-area: img;
 	overflow: hidden;
+    height: 100%;
 }
 
 .card__content > figure > img {
@@ -238,100 +231,12 @@ p {
 	line-height: 1.42;
 }
 
-.btn {
-	background: rgb(188 87 36);
-	color: rgb(255 255 255);
-	text-decoration: none;
-	display: inline-block;
-	padding: 0.5em;
-	border-radius: 0.25em;
-}
-
 aside {
 	width: 50vw;
 	margin: 0 auto;
 	text-align: left;
 }
 
-aside p {
-	margin-bottom: 1em;
-}
-
-$clouds: 
-  ("img/cloud_1.jpeg" 1000px 20s),
-  ("img/cloud_2.jpeg" 1000px 15s),
-  ("img/cloud_3.jpeg" 1579px 17s);
-
-  @for $i from 1 through length($clouds) {
-  
-    $item     : nth($clouds, $i);
-    $path     : nth($item, 1);
-    $width    : nth($item, 2);
-    $duration : nth($item, 3);
-    
-    @keyframes clouds-loop-#{$i} {
-      to { background-position: -$width 0; }
-    }
-    
-    .clouds-#{$i} {
-      background-image: url($path);
-      animation: clouds-loop-#{$i} $duration infinite linear;
-    }
-  }
-  
-  // =====================================================
-  
-  html, body {
-    font-family: 'Oswald', sans-serif;
-    height:  100%;
-    padding: 0;
-    margin:  0;
-  }
-  
-  body {
-    @include background(linear-gradient(#333, #000));
-    text-align:     center;
-    vertical-align: middle;
-    
-    a {
-      $color: #b8956b;
-      @include inline-block;
-      position:        relative;
-      text-align:      right;
-      text-decoration: none;
-      font-weight:     normal;
-      font-size:       1.5em;
-      line-height:     1.5em;
-      margin:          0;
-      color:           $color;
-      text-shadow:     0 -1px 0 rgba(lighten($color, 40%), 0.6),
-                       0 2px 3px #000;
-      
-      span { display: block; }
-    }
-  }
-    
-  .clouds {
-    @include opacity(0.4);
-    pointer-events: none;
-    position: absolute;
-    overflow: hidden;
-    top:      0;
-    left:     0;
-    right:    0;
-    height:   100%;
-  }  
-  
-  .clouds-1,
-  .clouds-2,
-  .clouds-3 {
-    background-repeat: repeat-x;
-    position: absolute;
-    top:      0;
-    right:    0;
-    left:     0;
-    height:   500px;
-  }
 /* ---------------------- ID ---------------------- */
 
 
