@@ -20,7 +20,7 @@
         <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
         <div class="container"> <!-- Container will contain content in certain space in middle of page -->
             <a href="index.html" class="navbar-brand">
-                <img src="images/sitelogo.png" alt="Site Logo" class="d-inline-block align-text-top w-25">
+                <img src="img/sitelogo.png" alt="Site Logo" class="d-inline-block align-text-top w-25">
             </a>
 
             <!-- Hamburger Menu Button-->
@@ -36,40 +36,52 @@
                         <a href="terms.html" class="nav-link hover-underline-animation nbMenuItem">Terminology</a>
                     </li>
                     <li class="nav-item">
-                        <a href="meteorologists.html" class="nav-link hover-underline-animation nbMenuItem">Meteorologists</a>
+                        <a href="#" class="nav-link hover-underline-animation nbMenuItem">Meteorologists</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <body>
-    <body class="flex-direction-row">
-        <div class="text-center card-hover">
-          <div class="card-hover__content">
-            
-            <h3 class="card-hover__title">
-              Suchit!
-            </h3>
-            <p class="card-hover__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
-            <a href="#" class="card-hover__link ">
-                <img src="img/suchit-pic.png" alt="suchit" class="zoomable-image">        
-            </a>
-          </div>
-          
-        </div>
-        <div class="text-center card-hover">
-            <div class="card-hover__content">
-              
-              <h3 class="card-hover__title">
-                Suchit!
-              </h3>
-              <p class="card-hover__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
-              <a href="#" class="card-hover__link ">
-                  <img src="img/suchit-pic.png" alt="suchit" class="zoomable-image">        
-              </a>
-            </div>
-          </div>
-      </body>
+        <main>
+            <ul id="cards">
+                <li class="card" id="card_1">
+                    <div class="card__content">
+                        <div>
+                            <h2>Suchit</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <figure>
+                            <img src="img/suchit-pic.png" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_2">
+                    <div class="card__content">
+                        <div>
+                            <h2>Pramya</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+                <li class="card" id="card_3">
+                    <div class="card__content">
+                        <div>
+                            <h2>Ayan</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p><a href="#top" class="btn btn--accent">Read more</a></p>
+                        </div>
+                        <figure>
+                            <img src="img/ayan-pic.png" alt="Image description">
+                        </figure>
+                    </div>
+                </li>
+            </ul>
+        </main>
     <footer class="p-5 footer text-light text-center position-relative">
         <div class="container">
             <p class="lead ">Copyright &copy; S.P.A 2023</p>
