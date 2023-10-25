@@ -95,6 +95,9 @@ body {
     
 }
 
+.meteorologist{
+    background-color: #3f7482; 
+}
 /* -----------Meteorologist Page CSS------------------- */
 :root {
 	--card-height: 40vw;
@@ -181,7 +184,7 @@ body {
 }
 
 body {
-	background: #3f7482;
+	background: white;
 	color: rgb(255, 255, 255);
 	text-align: center;
 
