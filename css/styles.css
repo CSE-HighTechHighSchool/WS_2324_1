@@ -7,14 +7,16 @@
     font-style: normal;
     font-display: swap;
 }
+
 @font-face {
-    font-family: 'NunitoSemiBold';
+    font-family: 'Nunito-SemiBold';
     src: url('../fonts/Nunito-SemiBold.woff2') format('woff2'),
         url('../fonts/Nunito-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
+
 
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 /*Navbar*/
@@ -28,13 +30,19 @@
     margin-right: 10px;;
 }
 
+
+.navbar .container {
+    align-items: center;
+    justify-content: space-around;
+}
+
 /*Index page*/
 .nb-index-background-color {  /*index navbar background image */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(32, 20, 66, 0.675)), url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(173, 125, 255, 0.064)), url('https://i.gifer.com/Qi7P.gif');
     background-size: cover;
     height: 100vh;
-    align-items: baseline;
     display: block;
+
 }
 
 .showcase-text { /*Styling for text in showcase image*/
@@ -44,10 +52,12 @@
     align-items: center; 
     width: 100%;
     height: 80%;
+
+    color: black;    
 }
 
 .showcase-text h1{
-    font-family: 'NunitoSemiBold', sans-serif;
+    font-family: 'Nunito-semiBold', sans-serif;
     line-height: 100px;
     background: linear-gradient(to right, rgb(16, 251, 255), rgb(191, 0, 255));
     -webkit-background-clip: text;
@@ -58,6 +68,17 @@
 .showcase-text h3{
     font-family: 'Nunito', sans-serif;
     color: rgb(158, 229, 186);
+
+}
+
+.forecast-content {
+    font-size: 4rem;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* background-color: #3498db; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.5s;
 }
 
 .container{
@@ -82,7 +103,6 @@
     opacity: 20%;
     margin-right: auto;
 }
-
 
 body {
     -webkit-text-size-adjust: 100%;
@@ -184,7 +204,6 @@ body {
 	background: #3f7482;
 	color: rgb(255, 255, 255);
 	text-align: center;
-
 	font-size: calc(1em + 0.5vw);
 }
 
