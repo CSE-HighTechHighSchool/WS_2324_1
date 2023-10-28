@@ -1,6 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Playfair+Display:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
-@import "compass/css3";
+/* Import Downloaded Fonts from Fonts Folder */
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.woff2') format('woff2'),
+        url('../fonts/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'NunitoSemiBold';
+    src: url('../fonts/Nunito-SemiBold.woff2') format('woff2'),
+        url('../fonts/Nunito-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 /*Navbar*/
@@ -15,19 +29,35 @@
 }
 
 /*Index page*/
-.showcase{
-    background-image: url("https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2023-03/230328-supercell-tornado-kansas-file-mn-1000-3bf68b.jpg");
+.nb-index-background-color {  /*index navbar background image */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(32, 20, 66, 0.675)), url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
     background-size: cover;
-    padding: 200px;    
-    zoom: 185%;
-    font-family: 'Londrina Shadow', sans-serif;
+    height: 100vh;
+    align-items: baseline;
+    display: block;
 }
 
-.nb-index-background-color {  /*index navbar background image */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(33, 12, 55, 0.403)), url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
-    background-size: cover;
-    height: 750px;
-    align-items: baseline;
+.showcase-text { /*Styling for text in showcase image*/
+    display: flex; 
+    flex-direction: column;    
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 80%;
+}
+
+.showcase-text h1{
+    font-family: 'NunitoSemiBold', sans-serif;
+    line-height: 100px;
+    background: linear-gradient(to right, rgb(16, 251, 255), rgb(191, 0, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 5px;
+}
+
+.showcase-text h3{
+    font-family: 'Nunito', sans-serif;
+    color: rgb(158, 229, 186);
 }
 
 .container{
@@ -37,7 +67,6 @@
 .footer{
     background-color: #acc6aa;
 }
-
 .ovPadLeft {
     padding-left: 75px;
 }
@@ -66,12 +95,9 @@ body {
     
 }
 
-.meteorologist{
-    background-color: #3f7482; 
-}
 /* -----------Meteorologist Page CSS------------------- */
 :root {
-	--card-height: 40vw;
+	--card-height: 35vw;
 	--card-margin: 4vw;
 	--card-top-offset: 1em;
 	--numcards: 3;
@@ -155,7 +181,7 @@ body {
 }
 
 body {
-	background: white;
+	background: #3f7482;
 	color: rgb(255, 255, 255);
 	text-align: center;
 
@@ -198,7 +224,7 @@ header {
 
 .card__content > div {
 	grid-area: text;
-	width: 80%;
+	width: 60%;
 	place-self: center;
 	text-align: left;
 
@@ -235,11 +261,13 @@ p {
 }
 
 aside {
-	width: 50vw;
 	margin: 0 auto;
 	text-align: left;
 }
 
+.meteor-body{
+    background-image: url('https://media4.giphy.com/media/Wmp1EOzVybWd13s5DB/giphy.gif');
+}
 /* ---------------------- ID ---------------------- */
 
 
