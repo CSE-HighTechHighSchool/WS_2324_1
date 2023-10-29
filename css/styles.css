@@ -243,7 +243,7 @@ main { /*display is block style; auto margin; width is 80 viewport width*/
 	border-radius: 0.5em;
 	overflow: hidden;
 	font-family: 'Nunito-SemiBold';
-	font-size: 20px; 
+	font-size: 17px; 
 	display: grid;
 	grid-template-areas: "text img";
 	grid-template-columns: 1fr 1fr;
