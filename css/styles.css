@@ -105,7 +105,7 @@
 }
 
 /* -----------Meteorologist Page CSS------------------- */
-:root {
+:root { /*covers all of metorologist html cards */
 	--card-height: 35vw;
 	--card-margin: 4vw;
 	--card-top-offset: 1em;
@@ -115,28 +115,15 @@
 
 #cards {
     padding: 30px;
-	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
-}
-
-#card_1 {
-	--index: 1;
-}
-
-#card_2 {
-	--index: 2;
-}
-
-#card_3 {
-	--index: 3;
 }
 
 .card {
-	position: sticky;
-	top: 0;
-	padding: 20px 20px 20px 20px;
+	position: sticky; /*sticky position of cards */
+	top: 0; /*cards stick to top of each other*/
+	padding: 20px; /*20px padding all around card box inside card*/
 }
 
-@supports (animation-timeline: works) {
+@supports (animation-timeline: works) { /*animation of cards*/
 
 	@scroll-timeline cards-element-scrolls-in-body {
 		source: selector(body);
@@ -151,22 +138,6 @@
 		time-range: 4s;
 	}
 
-	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-	}
-	
-	.card__content {
-		transform-origin: 50% 0%;
-		will-change: transform;
-
-		--duration: calc(var(--reverse-index0) * 1s);
-		--delay: calc(var(--index0) * 1s);
-
-		animation: var(--duration) linear scale var(--delay) forwards;
-		animation-timeline: cards-element-scrolls-in-body;
-	}
 
 	@keyframes scale {
 		to {
@@ -180,35 +151,35 @@
 	}
 }
 
-main {
+main { /*display is block style; auto margin; width is 80 viewport width*/
     display: block;
     margin: auto;
     width: 80vw;
 }
 
-#cards {
+#cards { /* rows and columns of grid; margin between cards */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(var(--numcards), var(--card-height));
 	gap: var(--card-margin);
 }
 
-.card__content {
-	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+.card__content { /*card box within card*/
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1); /*shadow of box within card*/
 	background: rgb(255, 255, 255);
 	color: rgb(10, 5, 7);
 	border-radius: 0.5em;
 	overflow: hidden;
-
+	font-family: 'Nunito-SemiBold';
+	font-size: 20px; 
 	display: grid;
 	grid-template-areas: "text img";
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
-
 	align-items: stretch;
 }
 
-.card__content > div {
+.card__content > div { /*card box content within div tags*/
 	grid-area: text;
 	width: 60%;
 	place-self: center;
@@ -218,13 +189,13 @@ main {
 	place-items: start;
 }
 
-.card__content > figure {
+.card__content > figure { /*card box content within figure tags*/
 	grid-area: img;
 	overflow: hidden;
     height: 100%;
 }
 
-.card__content > figure > img {
+.card__content > figure > img { /*card box content within figure tags within img tags*/
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -246,12 +217,7 @@ p {
 	line-height: 1.42;
 }
 
-aside {
-	margin: 0 auto;
-	text-align: left;
-}
-
-.meteor-body{
+.meteor-body{ /*background of meteorologist page (gradient and gif)*/
     background-image: linear-gradient(to bottom, rgba(0, 0, 0) 5%, rgba(68, 41, 113, 0.695), rgba(68, 41, 113, 0.1)), url('https://media4.giphy.com/media/Wmp1EOzVybWd13s5DB/giphy.gif');
 }
 /* ---------------------- ID ---------------------- */
