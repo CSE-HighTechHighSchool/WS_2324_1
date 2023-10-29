@@ -21,7 +21,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 /*Navbar*/
 .nb-background-color {  /*navbar background color */
-    background-color: rgba(124, 124, 124, 1)
+    background-color: rgb(0, 0, 0)
 }
 
 .nbMenuItem {       /*navbar link text properties*/
@@ -104,17 +104,6 @@
     margin-right: auto;
 }
 
-body {
-    -webkit-text-size-adjust: 100%;
-    font-variant-ligatures: none;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    font-size: 100%;
-    font-family: $firaSans;
-    
-}
-
 /* -----------Meteorologist Page CSS------------------- */
 :root {
 	--card-height: 35vw;
@@ -191,32 +180,10 @@ body {
 	}
 }
 
-
-/** PAGE STYLING **/
-
-* { /* Poor Man's Reset */
-	box-sizing: border-box;
-	margin: 0;
-	padding: 2;
-}
-
-body {
-	background: #3f7482;
-	color: rgb(255, 255, 255);
-	text-align: center;
-	font-size: calc(1em + 0.5vw);
-}
-
-header,
 main {
-	width: 80vw;
-	margin: 0 auto;
-}
-
-header {
-	height: 100vh;
-	display: grid;
-	place-items: center;
+    display: block;
+    margin: auto;
+    width: 80vw;
 }
 
 #cards {
@@ -285,7 +252,7 @@ aside {
 }
 
 .meteor-body{
-    background-image: url('https://media4.giphy.com/media/Wmp1EOzVybWd13s5DB/giphy.gif');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0) 5%, rgba(68, 41, 113, 0.695), rgba(68, 41, 113, 0.1)), url('https://media4.giphy.com/media/Wmp1EOzVybWd13s5DB/giphy.gif');
 }
 /* ---------------------- ID ---------------------- */
 

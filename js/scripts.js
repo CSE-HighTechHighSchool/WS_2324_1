@@ -25,9 +25,9 @@ fetch(apiEndpoint)
 
       let color = '#000000'
       if (temperature <= coldThreshold) {
-          color = '#3498db'; // Blue for cold temperatures
+          color = '0099ff'; // Blue for cold temperatures
       } else if (temperature >= hotThreshold) {
-          color =  '#e67e22'; // Orange for hot temperatures
+          color =  'ff6600'; // Orange for hot temperatures
       } else {
           // Calculate a gradient color between blue and orange
           const ratio = (temperature - coldThreshold) / (hotThreshold - coldThreshold);
@@ -41,6 +41,8 @@ fetch(apiEndpoint)
     .catch(error => {
       console.log(`Error: ${error}`);
     })
+
+
   })
   .catch(error => {
     console.error(`Error: ${error}`);
