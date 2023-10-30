@@ -17,8 +17,10 @@
     font-display: swap;
 }
 
+h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
+    font-family: 'Nunito', sans-serif;
+}
 
-@import url(https://fonts.googleapis.com/css?family=Oswald);
 /*Navbar*/
 .nb-background-color {  /*navbar background color */
     background-color: rgb(0, 0, 0)
@@ -31,9 +33,14 @@
 }
 
 
-.navbar .container {
+.navbar .container { /*Navbar spacing properties*/
     align-items: center;
     justify-content: space-around;
+}
+
+/*Footer*/
+.footer{
+    background-color: #303030;
 }
 
 /*Index page*/
@@ -55,63 +62,62 @@
     color: black;    
 }
 
-.showcase-text h1{
+.showcase-text h1{ /*Main text on showcase page properties*/
     font-family: 'Nunito-semiBold', sans-serif;
     line-height: 100px;
-    background: linear-gradient(to right, rgb(16, 251, 255), rgb(191, 0, 255));
+    background: linear-gradient(to right, rgb(52, 46, 222), rgb(191, 0, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 5px;
 }
 
-.showcase-text h3{
+.showcase-text h3{ /*Secondary text on showcase page*/
     font-family: 'Nunito', sans-serif;
     color: #259CC3;
 
 }
 
-.forecast-content {
+.forecast-content { /*Spacing and sizing properties for forecast section*/
     padding-top: 10px;;
     justify-content: space-between;
     text-align: center;
     margin: 10px;
-    height: 51vh;
+    min-height: 50vh;
 }
 
-.forecast-content h1 {
+.forecast-content h1 { /*Heading properties in forecast section*/
     color: black;
     font-family: 'Nunito-SemiBold', sans-serif;
 }
 
-.forecast-content h3 {
+.forecast-content h3 { /*Heading properties in forecast section*/
     font-family: 'Nunito', sans-serif;
 }
 
-.forecast-content h5 {
+.forecast-content h5 { /*Weather description text properties*/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.future-forecast {
+.future-forecast { /*Spacing properties for future forecast cards*/
     display: flex;
     justify-content: space-around;
     padding-top: 15px;
 }
-
-.card-wrapper {
-    border-color: rgb(63, 26, 126);
+.card-wrapper { /*Card styling, sizing, and spacing properties*/
+    border-color: rgb(179, 179, 179);
     border-width: 3px;
     width: 17vw;
     border-radius: 20px;
     padding: 10px;
     border-style: solid;
-    height: 100px;
+    max-height: 80px;
     overflow: hidden;
-    transition: height 1s;
+    transition: max-height 1s, border-color 0.5s;
 }
 
-.card-wrapper:hover {
-    height: 200px;
-}
+.card-wrapper:hover { /*Expand on hover effect for cards*/
+   max-height: 100vh;
+   border-color: rgb(63, 26, 126);
 
 .ovPadLeft {
     padding-left: 75px;

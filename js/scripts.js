@@ -4,6 +4,7 @@ const temperatureElement = document.getElementById("temperature"); //Gets the te
 const forecastInfoElement = document.getElementById("forecast-info"); //Gets the forecast-info element in the index.html file
 const forecastCardsElement = document.getElementById("forecast-cards"); //Gets the forecast-cards element in the index.html file
 
+//Checks if accessToken is valid
 const headers = {
   "Authorization": `Bearer ${accessToken}`
 };
@@ -17,9 +18,11 @@ fetch(apiEndpoint)
     return response.json();
   })
   .then(data => {
+    //Fetches current forecast data
     fetch(data.properties.forecastHourly)
     .then(res => res.json())
     .then(forecasthourly=> {
+      // Gets current temperature and transfers it to index.html page
       const temperature = forecasthourly.properties.periods[0].temperature;
       temperatureElement.textContent = `Current Temperature in Lincroft: ${temperature}°F`;
       forecastInfoElement.textContent = forecasthourly.properties.periods[0].shortForecast;
@@ -43,23 +46,67 @@ fetch(apiEndpoint)
       }
       temperatureElement.style.color = color;
     })
+    //Catches any error and logs to console
     .catch(error => {
       console.log(`Error: ${error}`);
     })
+    //Fetches future forecast data
     fetch(data.properties.forecast)
     .then(res => res.json())
     .then(forecast=> {
-        const forecast1 = forecast.properties.periods[1].name;
-        const forecast2 = forecast.properties.periods[2].name;
-        const forecast3 = forecast.properties.periods[3].name;
-        const forecast4 = forecast.properties.periods[4].name;
-        const forecast5 = forecast.properties.periods[5].name;
-        forecastCardsElement.innerHTML = '<h1>' + forecast1 + "</h1>";
+      // Gets future forecast and transfers it to index.html page
+        forecastCardsElement.innerHTML = '<div class="card-wrapper">' +
+                                            '<div class="card-details">' +
+                                              '<h3 class="card-title">' + forecast.properties.periods[1].name + '</h3>' +
+                                              '<p>Temperature ' + forecast.properties.periods[1].temperature + '°F </p>' +
+                                            '</div>' +
+                                            '<div class="reveal-details">' +
+                                              '<p>' + forecast.properties.periods[1].detailedForecast +'</p>' +
+                                            '</div>' +
+                                          '</div>' +
+                                          '<div class="card-wrapper">' +
+                                            '<div class="card-details">' +
+                                              '<h3 class="card-title">' + forecast.properties.periods[2].name + '</h3>' +
+                                              '<p>Temperature ' + forecast.properties.periods[2].temperature + '°F </p>' +
+                                            '</div>' +
+                                            '<div class="reveal-details">' +
+                                              '<p>' + forecast.properties.periods[2].detailedForecast +'</p>' +
+                                            '</div>' +
+                                          '</div>' +
+                                          '<div class="card-wrapper">' +
+                                            '<div class="card-details">' +
+                                              '<h3 class="card-title">' + forecast.properties.periods[3].name + '</h3>' +
+                                              '<p>Temperature ' + forecast.properties.periods[3].temperature + '°F </p>' +
+                                            '</div>' +
+                                            '<div class="reveal-details">' +
+                                              '<p>' + forecast.properties.periods[3].detailedForecast +'</p>' +
+                                            '</div>' +
+                                          '</div>' +
+                                          '<div class="card-wrapper">' +
+                                            '<div class="card-details">' +
+                                              '<h3 class="card-title">' + forecast.properties.periods[4].name + '</h3>' +
+                                              '<p>Temperature ' + forecast.properties.periods[4].temperature + '°F </p>' +
+                                            '</div>' +
+                                            '<div class="reveal-details">' +
+                                              '<p>' + forecast.properties.periods[4].detailedForecast +'</p>' +
+                                            '</div>' +
+                                          '</div>' +
+                                          '<div class="card-wrapper">' +
+                                            '<div class="card-details">' +
+                                              '<h3 class="card-title">' + forecast.properties.periods[5].name + '</h3>' +
+                                              '<p>Temperature ' + forecast.properties.periods[5].temperature + '°F </p>' +
+                                            '</div>' +
+                                            '<div class="reveal-details">' +
+                                              '<p>' + forecast.properties.periods[5].detailedForecast +'</p>' +
+                                            '</div>' +
+                                          '</div>';
     })
+    //Catches and error and logs to console
     .catch(error => {
       console.log(`Error: ${error}`);
     })
   })
+  //Catches and error and logs to console
   .catch(error => {
     console.error(`Error: ${error}`);
   });
