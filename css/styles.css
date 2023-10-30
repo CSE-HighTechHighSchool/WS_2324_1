@@ -118,6 +118,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 .card-wrapper:hover { /*Expand on hover effect for cards*/
    max-height: 100vh;
    border-color: rgb(63, 26, 126);
+}
 
 .ovPadLeft {
     padding-left: 75px;
@@ -355,5 +356,4 @@ p {
 	display: block;
 	width: 100%;
 	padding-top: 20px;
-
 }
