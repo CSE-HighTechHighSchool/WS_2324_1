@@ -127,8 +127,10 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     padding-right: 75px;
 }
 .container {
-    padding-left: 125px;
-    padding-right: 125px;
+    padding-left: 100px;
+    padding-right: 100px;
+	align-items: center;
+    justify-content: center;
 }
 .vr {
     margin-left: auto;
@@ -353,4 +355,18 @@ p {
 	display: block;
 	width: 100%;
 	padding-top: 20px;
+}
+
+/*--------------Line CSS----------*/
+.wrapper {
+    position: relative; ;
+    width: 1100px;
+    height: 5000px;
+	border-style: none solid none solid;
+	border-color: #ccc;
+	border-width: 1px;
+	padding: 0px 50px 0px 50px;
+}
+hr {
+	padding: 10px;
 }
