@@ -58,7 +58,7 @@
 .showcase-text h1{
     font-family: 'Nunito-semiBold', sans-serif;
     line-height: 100px;
-    background: linear-gradient(to right, rgb(16, 251, 255), rgb(191, 0, 255));
+    background: linear-gradient(to right, rgb(52, 46, 222), rgb(191, 0, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 5px;
