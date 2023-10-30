@@ -272,6 +272,10 @@ p {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
+.nav-link {
+	color:#29C8CC;
+	opacity: 80%;
+}
 
 /* ----------------- Footer CSS -----------------*/
 
