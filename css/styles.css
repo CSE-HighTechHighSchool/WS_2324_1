@@ -324,7 +324,6 @@ p {
 }
 
 .inner_footer .footer_three h1{
-	font-family: 'Arial';
 	font-size: 25px;
 	color: white;
 	font-weight: bold;
@@ -333,7 +332,6 @@ p {
 	margin-bottom: 20px;
 }
 .inner_footer .footer_three a{
-	font-family: 'roboto';
 	font-size: 15px;
 	color: white;
 	display: block;
@@ -350,7 +348,6 @@ p {
 
 .inner_footer .footer_three span{
 	color: white;
-	font-family: 'roboto';
 	font-size: 12px;
 	font-weight: 200;
 	display: block;
