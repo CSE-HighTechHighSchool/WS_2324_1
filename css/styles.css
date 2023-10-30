@@ -114,8 +114,81 @@
 }
 
 .footer{
-    background-color: #303030;
+
+    width: 100%;
+	display: block;
+	overflow: hidden;
+	padding: 50px 0;
+	box-sizing: border-box;
+	background-color: #18181a;
 }
+.inner_footer {
+	display: block;
+	margin: 0 auto;
+	width: 1100px;
+	height: 100%;
+}
+.inner_footer .sitelogo_container {
+	width: 35%;
+	float: left;
+	height: 100%;
+	display: block;
+	position: relative; top: 25px;
+}
+.inner_footer .sitelogo_container img{
+	width: 150px;
+}
+.inner_footer .footer_three {
+	width: calc(21.6777%- 20px);
+	margin-right: 100px;
+	float: left;
+	height: 100%;
+	position: relative; left: 150px;
+}
+
+.inner_footer .footer_three:last-child{
+	margin-right: 0;
+}
+
+.inner_footer .footer_three h1{
+	font-family: 'Arial';
+	font-size: 25px;
+	color: white;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.inner_footer .footer_three a{
+	font-family: 'roboto';
+	font-size: 15px;
+	color: white;
+	display: block;
+	font-weight: 200;
+	width: 100%;
+	padding-bottom: 5px;
+}
+
+.inner_footer .footer_three li{
+	display: inline-block;
+	padding: 0 5px;
+	font-size: 20px;
+}
+
+.inner_footer .footer_three span{
+	color: white;
+	font-family: 'roboto';
+	font-size: 12px;
+	font-weight: 200;
+	display: block;
+	width: 100%;
+	padding-top: 20px;
+
+}
+
+
+
+
 .ovPadLeft {
     padding-left: 75px;
 }
@@ -133,7 +206,7 @@
 }
 
 /* -----------Meteorologist Page CSS------------------- */
-:root {
+:root { /*covers all of metorologist html cards */
 	--card-height: 35vw;
 	--card-margin: 4vw;
 	--card-top-offset: 1em;
@@ -143,28 +216,15 @@
 
 #cards {
     padding: 30px;
-	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
-}
-
-#card_1 {
-	--index: 1;
-}
-
-#card_2 {
-	--index: 2;
-}
-
-#card_3 {
-	--index: 3;
 }
 
 .card {
-	position: sticky;
-	top: 0;
-	padding: 20px 20px 20px 20px;
+	position: sticky; /*sticky position of cards */
+	top: 0; /*cards stick to top of each other*/
+	padding: 20px; /*20px padding all around card box inside card*/
 }
 
-@supports (animation-timeline: works) {
+@supports (animation-timeline: works) { /*animation of cards*/
 
 	@scroll-timeline cards-element-scrolls-in-body {
 		source: selector(body);
@@ -179,22 +239,6 @@
 		time-range: 4s;
 	}
 
-	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-	}
-	
-	.card__content {
-		transform-origin: 50% 0%;
-		will-change: transform;
-
-		--duration: calc(var(--reverse-index0) * 1s);
-		--delay: calc(var(--index0) * 1s);
-
-		animation: var(--duration) linear scale var(--delay) forwards;
-		animation-timeline: cards-element-scrolls-in-body;
-	}
 
 	@keyframes scale {
 		to {
@@ -208,35 +252,35 @@
 	}
 }
 
-main {
+main { /*display is block style; auto margin; width is 80 viewport width*/
     display: block;
     margin: auto;
     width: 80vw;
 }
 
-#cards {
+#cards { /* rows and columns of grid; margin between cards */
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(var(--numcards), var(--card-height));
 	gap: var(--card-margin);
 }
 
-.card__content {
-	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+.card__content { /*card box within card*/
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1); /*shadow of box within card*/
 	background: rgb(255, 255, 255);
 	color: rgb(10, 5, 7);
 	border-radius: 0.5em;
 	overflow: hidden;
-
+	font-family: 'Nunito-SemiBold';
+	font-size: 17px; 
 	display: grid;
 	grid-template-areas: "text img";
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
-
 	align-items: stretch;
 }
 
-.card__content > div {
+.card__content > div { /*card box content within div tags*/
 	grid-area: text;
 	width: 60%;
 	place-self: center;
@@ -246,13 +290,13 @@ main {
 	place-items: start;
 }
 
-.card__content > figure {
+.card__content > figure { /*card box content within figure tags*/
 	grid-area: img;
 	overflow: hidden;
     height: 100%;
 }
 
-.card__content > figure > img {
+.card__content > figure > img { /*card box content within figure tags within img tags*/
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
@@ -274,12 +318,7 @@ p {
 	line-height: 1.42;
 }
 
-aside {
-	margin: 0 auto;
-	text-align: left;
-}
-
-.meteor-body{
+.meteor-body{ /*background of meteorologist page (gradient and gif)*/
     background-image: linear-gradient(to bottom, rgba(0, 0, 0) 5%, rgba(68, 41, 113, 0.695), rgba(68, 41, 113, 0.1)), url('https://media4.giphy.com/media/Wmp1EOzVybWd13s5DB/giphy.gif');
 }
 /* ---------------------- ID ---------------------- */
