@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     background-color: #303030;
 }
 
-/*Index page*/
+/*-----------Index page----------*/
 .nb-index-background-color {  /*index navbar background image */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(173, 125, 255, 0.064)), url('https://i.gifer.com/Qi7P.gif');
     background-size: cover;
@@ -120,23 +120,21 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
    border-color: rgb(63, 26, 126);
 }
 
-.ovPadLeft {
+
+/*--------Terminology Page Styling --------*/
+.ovPadLeft { /*Left Padding for images on left*/
     padding-left: 75px;
 }
-.ovPadRight {
+.ovPadRight { /*Right padding for images on right*/
     padding-right: 75px;
 }
-.container {
+.container { /*Positiong and spacing properties for Terms page*/
     padding-left: 100px;
     padding-right: 100px;
 	align-items: center;
     justify-content: center;
 }
-.vr {
-    margin-left: auto;
-    opacity: 20%;
-    margin-right: auto;
-}
+
 
 /* -----------Meteorologist Page CSS------------------- */
 :root { /*covers all of metorologist html cards */
