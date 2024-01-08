@@ -22,7 +22,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(); //firebase authentication
+const auth = getAuth(app); //firebase authentication
 
 //Return an instance of the database associated with your app
 const db = getDatabase(app);
@@ -91,7 +91,7 @@ function logIn(user){
     //Local storage will be cleared with signOut() function
     else {
         localStorage.setItem('keepLoggedIn','yes');
-        localStroage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('user', JSON.stringify(user));
         window.location = 'home.html' // Redirect broser to home.html
     }
 }
