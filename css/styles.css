@@ -109,19 +109,46 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     border-color: rgb(179, 179, 179);
     border-width: 3px;
     width: 18vw;
+    height: 6vw;
     border-radius: 20px;
     padding: 10px;
     border-style: solid;
-    max-height: 80px;
     overflow: hidden;
-    transition: max-height 1s, border-color 0.5s;
+    transition: max-height 1s, border-color 1s;
 }
 
+.card-title {
+    font-size: max(12px, 1.8vw);
+}
+.card-details {
+    font-size: max(11px, 1.5vw);
+}
+.reveal-details {
+    color: transparent;
+    font-size: max(10px, 1vw);
+    transition: color 1s;
+}
 .card-wrapper:hover { /*Expand on hover effect for cards*/
    max-height: 100vh;
    border-color: rgb(63, 26, 126);
+   .reveal-details {
+    color:black;
+    font-size: max(10px, 1vw);
+   }
 }
 
+@media (max-width: 400px){
+    .future-forecast {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-wrapper {
+        width: 80%;
+        margin: 20px;
+        max-height: 50px;
+    }
+}
 
 /*--------Terminology Page Styling --------*/
 .ovPadLeft { /*Left Padding for images on left*/
@@ -287,7 +314,6 @@ p {
 /* ----------------- Footer CSS -----------------*/
 
 .footer{
-
     width: 100%;
 	display: block;
 	overflow: hidden;
@@ -354,6 +380,7 @@ p {
 	width: 100%;
 	padding-top: 20px;
 }
+
 
 /*--------------Line CSS----------*/
 .wrapper {
