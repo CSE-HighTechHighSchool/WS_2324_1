@@ -63,6 +63,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 }
 
 .showcase-text h1{ /*Main text on showcase page properties*/
+    display: flex; 
     font-family: 'Nunito-semiBold', sans-serif;
     line-height: 100px;
     background: linear-gradient(to right, rgb(52, 46, 222), rgb(191, 0, 255));
@@ -72,13 +73,14 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 }
 
 .showcase-text h3{ /*Secondary text on showcase page*/
+    text-align: center;
     font-family: 'Nunito', sans-serif;
     color: #259CC3;
 
 }
 
 .forecast-content { /*Spacing and sizing properties for forecast section*/
-    padding-top: 10px;;
+    padding-top: 10px;
     justify-content: space-between;
     text-align: center;
     margin: 10px;
