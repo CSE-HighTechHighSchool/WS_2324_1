@@ -2,7 +2,7 @@
 
 // ----------------- Firebase Setup & Initialization ------------------------//
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"; 
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";  
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";  
 import {getDatabase, ref, set, update, child, get} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -51,7 +51,7 @@ document.getElementById("submitData").onclick = function(){
     // Add user account info to the FRD
     // Set function will create a new reference or completely replace an existing one
     // Each new user will be placed under the "users" node
-    set(ref(db, "user/" + user.uid + "/accountInfo"), {
+    set(ref(db, "users/" + user.uid + "/accountInfo"), {
       uid: user.uid, // save userId for home.js reference
       email:email,
       password:encryptPass(password),
