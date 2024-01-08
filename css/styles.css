@@ -429,3 +429,29 @@ table th{
 .notes{
     font-size:20px;
 }
+
+/*--------Responsive Styes-----------*/
+@media only screen and (max-width: 500px) {
+    .nbMenuItem {
+        font-size: 20px;
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button for smaller screens */
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .navMenuItem {
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+    }
+}

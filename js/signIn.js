@@ -10,19 +10,19 @@ import {getDatabase, ref, set, update, child, get} from "https://www.gstatic.com
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBjixA7IM_hfqNJJR8yk7aWeZtZmZFQfNY",
-  authDomain: "sb-rb-ftd.firebaseapp.com",
-  databaseURL: "https://sb-rb-ftd-default-rtdb.firebaseio.com",
-  projectId: "sb-rb-ftd",
-  storageBucket: "sb-rb-ftd.appspot.com",
-  messagingSenderId: "747752198659",
-  appId: "1:747752198659:web:bf277183f1495008943436"
-};
+    apiKey: "AIzaSyCMF2jbebUtr8mJp03eVDYfiRdSWdZeHGQ",
+    authDomain: "ws-2324-1.firebaseapp.com",
+    databaseURL: "https://ws-2324-1-default-rtdb.firebaseio.com",
+    projectId: "ws-2324-1",
+    storageBucket: "ws-2324-1.appspot.com",
+    messagingSenderId: "1095270047694",
+    appId: "1:1095270047694:web:a2e646a794bef2a0d5959f"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(); //firebase authentication
+const auth = getAuth(app); //firebase authentication
 
 //Return an instance of the database associated with your app
 const db = getDatabase(app);
@@ -91,7 +91,7 @@ function logIn(user){
     //Local storage will be cleared with signOut() function
     else {
         localStorage.setItem('keepLoggedIn','yes');
-        localStroage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('user', JSON.stringify(user));
         window.location = 'home.html' // Redirect broser to home.html
     }
 }
