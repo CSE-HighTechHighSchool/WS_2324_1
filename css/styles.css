@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 
 .nbMenuItem {       /*navbar link text properties*/
     font-size: 25px;
-    margin-left: 10px;
+    margin-left: 1px;
     margin-right: 10px;;
 }
 
