@@ -433,10 +433,15 @@ table th{
     font-size:25px;
 }
 
+.signUpContainer{
+	margin-top: 50px;
+}
+
 .signUpForm{
     display: flex;
     justify-content: center;
     align-items: center;
+	margin-bottom: 50px;
 }
 
 .temps-table{
@@ -483,4 +488,70 @@ table th{
         width: 100%;
         text-align: center;
     }
+}
+/*------ Sign In Page ------*/
+
+.signInForm {					/* Centers sign in information inside box */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	
+}
+
+
+.signInBox {					/* Sets the margins, background color, and display for the sign in box */
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-top: 10px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+    box-shadow: 0px 0 31px 0px rgb(0 0 0 / 10%);
+}
+
+
+.signInBtn {						/* Styling for Sign In button */
+    color: white;
+    background-color: rgb(31, 140, 179);
+    border-color: rgb(31, 140, 179);
+    border-width: 2px;
+    height: 60px;
+    text-align: center;
+    line-height: 20px;
+	font-size: 20px;
+}
+
+.signInBtn:hover {					/* Change in color when hovering over button */
+    color: rgb(31, 140, 179);
+    background-color: rgb(238, 244, 246);
+    border-color: rgb(31, 140, 179);
+}
+
+
+.badge {							/* Styling for "Don't have an account?" button */
+    border-radius: 10px;
+    background-color: rgb(94, 105, 108) !important;
+}
+
+
+.badge:hover {						/* Change in color when hovering over button */
+    background-color: rgb(203, 245, 255) !important;
+    color: rgb(5, 40, 53);
+}
+
+
+#monmouth-county{					/* Styling for image */
+    max-width: 150%;
+    object-fit: fill;
+    padding-right: 50px;
+    margin-left: -22px;
+    margin-top: -10px;
+    padding-bottom: -50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
