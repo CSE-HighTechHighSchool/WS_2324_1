@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     justify-content: space-between;
     text-align: center;
     margin: 10px;
-    min-height: 50vh;
+    min-height: 40vh;
 }
 
 .forecast-content h1 { /*Heading properties in forecast section*/
@@ -311,82 +311,98 @@ p {
 	opacity: 80%;
 }
 
-/* ----------------- Footer CSS -----------------*/
+/* ----------------- CSS -----------------*/
 
-.footer{
-    width: 100%;
-	display: block;
-	overflow: hidden;
-	padding: 50px 0;
-	box-sizing: border-box;
-	background-color: #18181a;
+.footer {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 5vh;
+    box-sizing: border-box;
+    background-color: #18181a;
 }
+
 .inner_footer {
-	display: block;
-	margin: 0 auto;
-	width: 1100px;
-	height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
 }
+
 .inner_footer .sitelogo_container {
-	width: 35%;
-	float: left;
-	height: 100%;
-	display: block;
-	position: relative; top: 25px;
+    flex: 0 0 35%;
+    margin-top: 25px;
 }
-.inner_footer .sitelogo_container img{
-	width: 150px;
+
+
+.inner_footer .sitelogo_container img {
+    width: 10vw;
+    max-width: 150px;
+    min-width: 75px;
+    height: auto;
+    
 }
+
 .inner_footer .footer_three {
-	width: calc(21.6777%- 20px);
-	margin-right: 100px;
-	float: left;
-	height: 100%;
-	position: relative; left: 150px;
+    flex: 0 0 calc(21.6777% - 40px);
+    margin-right: 0px;
 }
 
-.inner_footer .footer_three:last-child{
-	margin-right: 0;
+.inner_footer .footer_three:last-child {
+    margin-right: calc(1% - 20px);
+    
 }
 
-.inner_footer .footer_three h1{
-	font-size: 25px;
-	color: white;
-	font-weight: bold;
-	display: block;
-	width: 100%;
-	margin-bottom: 20px;
-}
-.inner_footer .footer_three a{
-	font-size: 15px;
-	color: white;
-	display: block;
-	font-weight: 200;
-	width: 100%;
-	padding-bottom: 5px;
+.inner_footer .footer_three h1 {
+    font-size:calc(12px + 1.5vw);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.inner_footer .footer_three li{
-	display: inline-block;
-	padding: 0 5px;
-	font-size: 20px;
+.inner_footer .footer_three a {
+    font-size:calc(10px + 0.5vw);
+    color: white;
+    display: block;
+    font-weight: 200;
+    padding-bottom: 5px;
+    text-decoration: none;
 }
 
-.inner_footer .footer_three span{
-	color: white;
-	font-size: 12px;
-	font-weight: 200;
-	display: block;
-	width: 100%;
-	padding-top: 20px;
+.inner_footer .footer_three li {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
 }
 
+.inner_footer .footer_three span {
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    display: block;
+    padding-top: 20px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 1200px) {
+    .footer .inner_footer {
+        width: 90%;
+    }
+
+    .inner_footer .sitelogo_container,
+    .inner_footer .footer_three {
+        flex: 100%;
+        margin-bottom: 30px;
+    }
+}
 
 /*--------------Line CSS----------*/
 .wrapper {
-    position: relative; ;
+    position: relative;
     width: 1100px;
-    height: 3200px;
+    height: 3000px;
 	border-style: none solid none solid;
 	border-color: #ccc;
 	border-width: 1px;
