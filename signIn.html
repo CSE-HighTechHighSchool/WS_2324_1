@@ -27,7 +27,7 @@
     
 </head>
 
-<body>
+<body></body>
     <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
         <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
         <div class="container"> <!-- Container will contain content in certain space in middle of page -->
@@ -62,22 +62,29 @@
     </nav>
     <!-- Navbar -->
     
-
-    <div class="container">
-        <br><h2 class="text-center">Sign In</h2><br>
-    </div>
-
-    <!--Sign Up -->
-    <div class="signUpForm">     
-        <form>
-            <input type="email" placeholder="Email" id="loginEmail" class="form-control mb-3">
-            <input type="password" placeholder="password" id="loginPassword" class="form-control mb-3">
-            <div class="form-check form-switch mb-3">
-                <input class="form-check-input" type="checkbox" role="switch" id="keepLoggedInSwitch">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Keep me signed in</label>
+    <div class="signInBox w-50 row">
+        <!-- Image next to form -->
+        <div class="col-lg-5">
+            <img src="img/monmouth-county-map.jpeg" class="img-fluid" id="monmouth-county" alt="Monmouth County">
+        </div>
+        <div class="col-lg-7">
+            <br><h2 style="margin-left: 150px">Sign In</h2><br>
+            <!--Sign In form-->
+            <div class="signInForm">     
+                <form>
+                    <input type="email" placeholder="Email" id="loginEmail" class="form-control mb-3">
+                    <input type="password" placeholder="password" id="loginPassword" class="form-control mb-3">
+                    <div class="form-check form-switch mb-3">
+                        <input class="form-check-input" type="checkbox" role="switch" id="keepLoggedInSwitch">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Keep me signed in</label>
+                    </div>
+                    <button type = "button" id="signIn" name="signIn" class="btn signInBtn btn-outline-primary mb-3 w-100">Sign In
+                        <!-- <i class="bi bi-arrow-up-right-circle-fill h2 icon-white"></i> -->
+                    </button>
+                    <a href="register.html" class="badge bg-secondary py-1 w-100" style="text-decoration: none;">Don't have an account?</a>  <!-- Redirects to register.html-->
+                </form>
             </div>
-            <button type = "button" id="signIn" name="signIn" class="btn btn-outline-primary mb-3 w-100">Sign In</button>
-        </form>
+        </div>
     </div>
     
     <div class="footer">

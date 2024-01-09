@@ -11,7 +11,7 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
             crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Bootstrap 5, crypto-js and custom JS script tags-->
     <!-- Include 'defer' keyword for each to improve loading-->
@@ -25,11 +25,11 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light headerBG">
-        <!-- lg = large breakpoint, headerBG = custom css BG color -->
+    <nav class="navbar navbar-expand-lg navbar-dark nb-background-color">
+        <!-- lg = large breakpoint, navbar-light = make text dark, headerBG = custom css BG color -->
         <div class="container"> <!-- Container will contain content in certain space in middle of page -->
-            <a href="index1.html" class="navbar-brand">
-                <img src="/img/Built_with_Firebase_Logo_LightTP.png" alt="Built wtih Firebase" class="d-inline-block align-text-top">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/sitelogo.png" alt="Site Logo" class="d-inline-block align-text-top w-25">
             </a>
 
             <!-- Hamburger Menu Button-->
@@ -41,16 +41,23 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <!-- Links to hamburger menu button -->
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item nbMenuItem">
-                        <a  id="userLink" class="nav-link" href="">User Name</a>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link hover-underline-animation nbMenuItem">Terminology</a>
                     </li>
-                    <li class="nav-item nbMenuItem">
-                        <a  id="signOut" class="nav-link hover-underline-animation" href="">Sign Out</a>
+                    <li class="nav-item">
+                        <a href="meteorologists.html" class="nav-link hover-underline-animation nbMenuItem">Meteorologists</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="register.html" class="nav-link hover-underline-animation nbMenuItem">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="signIn.html" class="nav-link hover-underline-animation nbMenuItem">Sign In</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container">
         <br><br>
         <h1 id = "welcome"></h1><br><br>
