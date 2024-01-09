@@ -2,8 +2,9 @@
 
 // ----------------- Firebase Setup & Initialization ------------------------//
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"; 
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";  
-import {getDatabase, ref, set, update, child, get} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";  
+import { getDatabase, ref, set, update, child, get} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"
+
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,7 +24,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 //Initialize Firebase Authentication
-const auth = getAuth()
+const auth = getAuth(app)
 
 // Returns instace of your app's FRD
 const db = getDatabase(app)
@@ -37,6 +38,10 @@ document.getElementById("submitData").onclick = function(){
   // Firebase requires a password of at least 6 characters
   const password = document.getElementById("userPass").value
 
+  console.log(firstName)
+  console.log(lastName)
+  console.log(email)
+  console.log(password)
   // Validate the user inputs
   if(!validation(firstName, lastName, email, password)){
     return
@@ -47,7 +52,6 @@ document.getElementById("submitData").onclick = function(){
   .then((userCredential) => {
     // Create user credential
     const user = userCredential.user
-
     // Add user account info to the FRD
     // Set function will create a new reference or completely replace an existing one
     // Each new user will be placed under the "users" node
@@ -57,6 +61,7 @@ document.getElementById("submitData").onclick = function(){
       password:encryptPass(password),
       firstName:firstName,
       lastName:lastName
+
     })
     .then(() => {
       // Data saved successfully
