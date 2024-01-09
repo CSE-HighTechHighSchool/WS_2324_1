@@ -1,4 +1,11 @@
-const apiEndpoint = "https://api.weather.gov/points/40.3291,-74.1240"; // Lincroft's coordinates
+const apiEndpointLincroft = "https://api.weather.gov/points/40.33,-74.12"; // Lincroft's coordinates
+const apiEndpointMorganville = "https://api.weather.gov/points/40.37,-74.26"; // Morganville's coordinates
+const apiEndpointMatawan = "https://api.weather.gov/points/40.41,-74.22"; // Matawan's coordinates
+const apiEndpointFreehold = "https://api.weather.gov/points/40.26,-74.28"; // Freehold's coordinates
+const apiEndpointHowell = "https://api.weather.gov/points/40.18,-74.18"; // Howell's coordinates
+const apiEndpointHomdel = "https://api.weather.gov/points/40.33,-74.18"; // Homdel's coordinates
+const apiEndpointHazlet = "https://api.weather.gov/points/40.42,-74.16"; // Hazlet's coordinates
+const apiEndpointRumson = "https://api.weather.gov/points/40.38,-73.99"; // Lincroft's coordinates
 const accessToken = "bLixBffiQkvdoZWKWCpvCZGraiuwMWbC"; // Access Token
 const temperatureElement = document.getElementById("temperature"); //Gets the temperature element in the index.html file
 const forecastInfoElement = document.getElementById("forecast-info"); //Gets the forecast-info element in the index.html file
@@ -10,7 +17,7 @@ const headers = {
 };
 
 //Fetches the weather data from weather.gov API
-fetch(apiEndpoint)
+fetch(apiEndpointLincroft)
   .then(response => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
