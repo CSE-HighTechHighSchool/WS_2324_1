@@ -29,13 +29,26 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 .nbMenuItem {       /*navbar link text properties*/
     font-size: 25px;
     margin-left: 10px;
-    margin-right: 10px;;
+    margin-right: 10px;
 }
-
 
 .navbar .container { /*Navbar spacing properties*/
     align-items: center;
     justify-content: space-around;
+}
+
+.navbar button { /*Sign out button properties*/
+    height: 7vh;
+    background-color: transparent;
+    opacity: 80%;
+    color: #29C8CC;
+    border-color: transparent;
+    font-size: 25px;
+}
+
+.navbar button:hover { /*Sign out button hover effect*/
+    color: #eae6e6;
+    opacity: 80%;
 }
 
 .container {
@@ -120,13 +133,13 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     transition: max-height 1s, border-color 1s;
 }
 
-.card-title {
+.card-title { /*Responsive card title font*/
     font-size: max(12px, 1.8vw);
 }
-.card-details {
+.card-details {/*Responsive card detail font*/
     font-size: max(11px, 1.5vw);
 }
-.reveal-details {
+.reveal-details { /*Responsive card reveal title font*/
     color: transparent;
     font-size: max(10px, 1vw);
     transition: color 1s;
@@ -177,10 +190,10 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     align-items: center;
     justify-content: center;
 }
-.ovPadLeft2 {
+.ovPadLeft2 { /*Responsive terminology text */
     font-size: calc(15px + 3vw);
 }
-.ovPadRight2 {
+.ovPadRight2 { /*Responsive terminology text */
     font-size: calc(15px + 3vw);
 }
 
@@ -194,7 +207,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 	--outline-width: 0px;
 }
 
-#cards {
+#cards {    /* Meteorologist card padding */
     padding: 30px;
 }
 
@@ -283,7 +296,9 @@ main { /*display is block style; auto margin; width is 80 viewport width*/
 	object-fit: cover;
 }
 
-h1 {
+
+/*Font Properties*/
+h1 {    
 	font-weight: 300;
 	font-size: 3.5em;
 }
@@ -304,7 +319,7 @@ p {
 }
 
 /* -----------Tracker Page CSS------------------- */
-.tracker-container {
+.tracker-container {   /*Sets display and sizing for main container*/
     width: 100vw;
     display: flex;
     align-items: center;
@@ -312,14 +327,16 @@ p {
     flex-direction: column;
 }
 
-.add-data, .get-data, .get-chart, .remove-data {
+.add-data, .get-data, .get-chart, .remove-data { /* Sets width for sub-containers */
     width: 80vw;
 }
 
-.data-form {
+.data-form {    /* Padding on four data forms on tracking page*/
     padding: 20px;
 }
 
+
+/*Spacing and hover animation for form inputs */
 .form-select {
     margin: 5px;
     border-width: 2px;
@@ -329,6 +346,7 @@ p {
     border-color: rgb(63, 26, 126);
 }
 
+/*Button styling and hover animation for forms*/
 .btn {
     margin: 5px;
     color: black;
@@ -343,6 +361,7 @@ p {
     color:black;
 }
 
+/*Chart JS sizing*/
 #myChart {
     width: 70vw; 
     height: 0vh;
@@ -353,7 +372,6 @@ p {
 .hover-underline-animation {
     display: inline-block;
     position: relative;
-    /*color: #0087ca;*/
   }
   
 .hover-underline-animation:after {
@@ -365,13 +383,11 @@ p {
     bottom: 0;
     left: 0;
     background-color: #eae6e6;
-    /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
   
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
-    /*transform-origin: bottom left;*/
 }
 .nav-link {
 	color:#29C8CC;
@@ -473,68 +489,8 @@ hr {
 	padding: 10px;
 }
 
-/*-----------Firebase CSS-----------*/
 
-/* ----------------- Class CSS ----------------- */
-table th{
-    /*Keep column headers at the top as table is scrolled */
-    position: sticky;
-    top: 0px; /* https://www.w3schools.com/cssref/pr_pos_top.php*/
-    overflow-y: auto;
-
-}
-
-.dataForm{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.days{
-    text-align: center;
-    vertical-align: middle;
-}
-
-.headerBG{
-    background-color: #e6e6e6;
-}
-
-.footerBG{
-    background-color: #e6e6e6;
-}
-
-.ordered-List-item-font{
-    font-size:22px;
-}
-.overview-font{
-    font-size:25px;
-}
-
-.temps-table{
-    max-height: 250px;  /*prevent table from stretching to bottom of screen*/
-    overflow: auto;
-}
-
-.temps{
-    text-align: center;
-    vertical-align: middle;
-}
-
-.nbMenuItem{
-    font-size:25px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.notes{
-    font-size:20px;
-}
-.nav-item {
-        text-align:right;
-        padding-right: 2vw;
-}
-
-/*--------Responsive Styes-----------*/
+/*--------Responsive Styles-----------*/
 @media only screen and (max-width: 400px) {
     .nbMenuItem {
         font-size: 20px; /* adjust font size for smaller screens */
