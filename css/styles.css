@@ -139,13 +139,14 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     font-size: max(10px, 1vw);
    }
 }
-
+/* media Query for screens with a maximum width of 400px */
 @media (max-width: 400px){
+	/* adjust layout for future-forecast container on smaller screens */
     .future-forecast {
         flex-direction: column;
         align-items: center;
     }
-
+	/* adjust styles for card-wrapper on smaller screens */
     .card-wrapper {
         width: 80%;
         margin: 20px;
@@ -166,10 +167,10 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 	align-items: center;
     justify-content: center;
 }
-.leadoverview-font {
+.leadoverview-font { /* font size calculation for lead overview */
     font-size: calc(10px + 0.75vw);
 }
-.img-fluid {
+.img-fluid {	/* responsive width and height calculation for images with fluid size */
     width: calc(100px + 15vw);
     height: calc(100px + 10vw);
     align-items: center;
@@ -332,7 +333,7 @@ p {
 
 /* ----------------- Footer CSS -----------------*/
 
-.footer{
+.footer{ /* styling for the main footer container */
     width: auto;
     height: auto;
 	display: block;
@@ -341,41 +342,41 @@ p {
 	box-sizing: border-box;
 	background-color: #18181a;
 }
-.inner_footer {
+.inner_footer { /* styling for the inner content of the footer */
 	display: flex;
     justify-content: space-between;
 	margin: flex-start;
 	max-width: 1100px;
 	margin: 0 auto;
 }
-.inner_footer .sitelogo_container {
+.inner_footer .sitelogo_container { /* styling for the site logo container */
     flex: 0 0 35%;
     margin-top: 25px;
 }
-.inner_footer .sitelogo_container img{
+.inner_footer .sitelogo_container img{ /* styling for the site logo image within the logo container */
 	width: 10vw;
     max-width: 150px;
     min-width: 75px;
     height: auto;
 
 }
-.inner_footer .footer_three {
+.inner_footer .footer_three { /* styling for the third section in the footer */
 	flex: 0 0 calc(21.6777% - 40px);
     margin-right: 0px;
 }
 
-.inner_footer .footer_three:last-child {
+.inner_footer .footer_three:last-child { /* styling for the last child of the third section */
     margin-right: calc(1% - 20px);
 }
 
-.inner_footer .footer_three h1{
+.inner_footer .footer_three h1{ /* styling for headings in the third section */
     font-size:calc(12px + 1vw);
     color: white;
 	font-weight: bold;
     margin-bottom: 10px;
 
 }
-.inner_footer .footer_three a{
+.inner_footer .footer_three a{ /* styling for links within the third section */
     font-size:calc(10px + 0.3vw);
     color: white;
     display: block;
@@ -384,13 +385,13 @@ p {
     text-decoration: none;
 }
 
-.inner_footer .footer_three li {
+.inner_footer .footer_three li { /* styling for list items within the third section */
     display: inline-block;
     padding: 0 5px;
     font-size: 20px;
 }
 
-.inner_footer .footer_three span {
+.inner_footer .footer_three span { /* styling for additional text within the third section */
     color: white;
     font-size: 12px;
     font-weight: 200;
@@ -398,12 +399,13 @@ p {
     padding-top: 20px;
 }
 
-/* Media Query for smaller screens */
+/* Media Query for smaller screens (max-width: 1200px) */
 @media (max-width: 1200px) {
     .footer .inner_footer {
-        width: 90%;
+        width: 90%;		/* adjusting the width for smaller screens */
     }
 
+	/* adjusting the layout for smaller screens */
     .inner_footer .sitelogo_container,
     .inner_footer .footer_three {
         flex: 100%; 
@@ -428,7 +430,7 @@ hr {
 
 /* ----------------- Class CSS ----------------- */
 table th{
-    /*Keep column headers at the top as table is scrolled*/
+    /*Keep column headers at the top as table is scrolled */
     position: sticky;
     top: 0px; /* https://www.w3schools.com/cssref/pr_pos_top.php*/
     overflow-y: auto;
@@ -488,19 +490,19 @@ table th{
 /*--------Responsive Styes-----------*/
 @media only screen and (max-width: 400px) {
     .nbMenuItem {
-        font-size: 20px;
+        font-size: 20px; /* adjust font size for smaller screens */
     }
 
     .nav-toggle {
         display: block; /* Show the toggle button for smaller screens */
     }
 
-    .navbar .container {
+    .navbar .container { /* adjust layout for smaller screens */
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .nav-menu {
+    .nav-menu {			/* make the menu full width for smaller screens */
         width: 100%;
     }
 
@@ -513,7 +515,7 @@ table th{
 
 /*--------Sign Up and Sign In Pages----------*/
 
-/* Centers regsiter form within the surrounding box */
+/* centers regsiter form within the surrounding box */
 .signUpForm {
     display: flex;
     justify-content: center;
@@ -528,7 +530,7 @@ h4{
 .right-box{
     padding: 40px 30px 40px 40px;
 }
-
+/* centers sign-in form within the surrounding box */
 .signInForm {
     display: flex;
     justify-content: center;
@@ -536,7 +538,7 @@ h4{
 	margin-bottom: 50px;
 
 }
-
+/* padding for Monmouth County Map image */
 .featured-image{
 	padding-left: 20px;
 	padding-right: 20px;
