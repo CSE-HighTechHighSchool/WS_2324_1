@@ -482,7 +482,9 @@ table th{
     font-size: 20px;
 }
 .nav-item {
-    text-align: right;
+    text-align:right;
+    padding-right: 2vw;
+
 }
 
 /*--------Responsive Styes-----------*/
