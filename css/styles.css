@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 
 .nbMenuItem {       /*navbar link text properties*/
     font-size: 25px;
-    margin-left: 1px;
+    margin-left: 10px;
     margin-right: 10px;;
 }
 
@@ -38,6 +38,9 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     justify-content: space-around;
 }
 
+.container {
+    padding-right: 1vw;
+}
 /*Footer*/
 .footer{
     background-color: #303030;
@@ -84,7 +87,7 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     justify-content: space-between;
     text-align: center;
     margin: 10px;
-    min-height: 50vh;
+    min-height: 40vh;
 }
 
 .forecast-content h1 { /*Heading properties in forecast section*/
@@ -152,16 +155,31 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 
 /*--------Terminology Page Styling --------*/
 .ovPadLeft { /*Left Padding for images on left*/
-    padding-left: 75px;
+    padding-left: 1vw;
 }
 .ovPadRight { /*Right padding for images on right*/
-    padding-right: 75px;
+    padding-right: 1vw;
 }
-.container { /*Positiong and spacing properties for Terms page*/
-    padding-left: 100px;
-    padding-right: 100px;
+.whole { /*Positiong and spacing properties for Terms page*/
+    padding-left: 13.5vw;
+    padding-right: 1.5vw;
 	align-items: center;
     justify-content: center;
+}
+.leadoverview-font {
+    font-size: calc(10px + 0.75vw);
+}
+.img-fluid {
+    width: calc(100px + 15vw);
+    height: calc(100px + 10vw);
+    align-items: center;
+    justify-content: center;
+}
+.ovPadLeft2 {
+    font-size: calc(15px + 3vw);
+}
+.ovPadRight2 {
+    font-size: calc(15px + 3vw);
 }
 
 
@@ -232,12 +250,13 @@ main { /*display is block style; auto margin; width is 80 viewport width*/
 	border-radius: 0.5em;
 	overflow: hidden;
 	font-family: 'Nunito-SemiBold';
-	font-size: 17px; 
+	font-size: 2vw; 
 	display: grid;
 	grid-template-areas: "text img";
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 	align-items: stretch;
+    padding-top:10px;
 }
 
 .card__content > div { /*card box content within div tags*/
@@ -314,79 +333,88 @@ p {
 /* ----------------- Footer CSS -----------------*/
 
 .footer{
-    width: 100%;
+    width: auto;
+    height: auto;
 	display: block;
 	overflow: hidden;
-	padding: 50px 0;
+	padding: 5vh;
 	box-sizing: border-box;
 	background-color: #18181a;
 }
 .inner_footer {
-	display: block;
+	display: flex;
+    justify-content: space-between;
+	margin: flex-start;
+	max-width: 1100px;
 	margin: 0 auto;
-	width: 1100px;
-	height: 100%;
 }
 .inner_footer .sitelogo_container {
-	width: 35%;
-	float: left;
-	height: 100%;
-	display: block;
-	position: relative; top: 25px;
+    flex: 0 0 35%;
+    margin-top: 25px;
 }
 .inner_footer .sitelogo_container img{
-	width: 150px;
+	width: 10vw;
+    max-width: 150px;
+    min-width: 75px;
+    height: auto;
+
 }
 .inner_footer .footer_three {
-	width: calc(21.6777%- 20px);
-	margin-right: 100px;
-	float: left;
-	height: 100%;
-	position: relative; left: 150px;
+	flex: 0 0 calc(21.6777% - 40px);
+    margin-right: 0px;
 }
 
-.inner_footer .footer_three:last-child{
-	margin-right: 0;
+.inner_footer .footer_three:last-child {
+    margin-right: calc(1% - 20px);
 }
 
 .inner_footer .footer_three h1{
-	font-size: 25px;
-	color: white;
+    font-size:calc(12px + 1vw);
+    color: white;
 	font-weight: bold;
-	display: block;
-	width: 100%;
-	margin-bottom: 20px;
+    margin-bottom: 10px;
+
 }
 .inner_footer .footer_three a{
-	font-size: 15px;
-	color: white;
-	display: block;
-	font-weight: 200;
-	width: 100%;
-	padding-bottom: 5px;
+    font-size:calc(10px + 0.3vw);
+    color: white;
+    display: block;
+    font-weight: 200;
+    padding-bottom: 5px;
+    text-decoration: none;
 }
 
-.inner_footer .footer_three li{
-	display: inline-block;
-	padding: 0 5px;
-	font-size: 20px;
+.inner_footer .footer_three li {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 20px;
 }
 
-.inner_footer .footer_three span{
-	color: white;
-	font-size: 12px;
-	font-weight: 200;
-	display: block;
-	width: 100%;
-	padding-top: 20px;
+.inner_footer .footer_three span {
+    color: white;
+    font-size: 12px;
+    font-weight: 200;
+    display: block;
+    padding-top: 20px;
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 1200px) {
+    .footer .inner_footer {
+        width: 90%;
+    }
 
+    .inner_footer .sitelogo_container,
+    .inner_footer .footer_three {
+        flex: 100%; 
+        margin-bottom: 30px;
+    }
+}
 /*--------------Line CSS----------*/
 .wrapper {
-    position: relative; ;
-    width: 1100px;
-    height: 3200px;
+    position: relative;
+    width: 71vw;
+    height: auto;
 	border-style: none solid none solid;
 	border-color: #ccc;
 	border-width: 1px;
@@ -463,9 +491,13 @@ table th{
 .notes{
     font-size:20px;
 }
+.nav-item {
+        text-align:right;
+        padding-right: 2vw;
+}
 
 /*--------Responsive Styes-----------*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
     .nbMenuItem {
         font-size: 20px;
     }
