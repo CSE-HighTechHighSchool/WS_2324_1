@@ -28,8 +28,8 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 
 .nbMenuItem {       /*navbar link text properties*/
     font-size: 25px;
-    margin-left: 1px;
-    margin-right: 10px;;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -38,10 +38,11 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
     justify-content: space-around;
 }
 
-/*Footer*/
-.footer{
-    background-color: #303030;
+.container {
+    padding-right: 1vw;
 }
+
+
 
 /*-----------Index page----------*/
 .nb-index-background-color {  /*index navbar background image */
@@ -157,9 +158,9 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 .ovPadRight { /*Right padding for images on right*/
     padding-right: 75px;
 }
-.container { /*Positiong and spacing properties for Terms page*/
-    padding-left: 100px;
-    padding-right: 100px;
+.whole { /*Positiong and spacing properties for Terms page*/
+    padding-left: 200px;
+    padding-right: 75px;
 	align-items: center;
     justify-content: center;
 }
@@ -356,14 +357,15 @@ p {
 }
 
 .inner_footer .footer_three h1 {
-    font-size:calc(12px + 1.5vw);
+    font-size:calc(12px + 1vw);
     color: white;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .inner_footer .footer_three a {
-    font-size:calc(10px + 0.5vw);
+    
+    font-size:calc(10px + 0.3vw);
     color: white;
     display: block;
     font-weight: 200;
@@ -402,7 +404,7 @@ p {
 .wrapper {
     position: relative;
     width: 1100px;
-    height: 3000px;
+    height: 3600px;
 	border-style: none solid none solid;
 	border-color: #ccc;
 	border-width: 1px;
@@ -477,11 +479,14 @@ table th{
 }
 
 .notes{
-    font-size:20px;
+    font-size: 20px;
+}
+.nav-item {
+    text-align: right;
 }
 
 /*--------Responsive Styes-----------*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
     .nbMenuItem {
         font-size: 20px;
     }
@@ -493,6 +498,7 @@ table th{
     .navbar .container {
         flex-direction: column;
         align-items: flex-start;
+        
     }
 
     .nav-menu {
@@ -504,6 +510,7 @@ table th{
         width: 100%;
         text-align: center;
     }
+<<<<<<< HEAD
 }
 /*------ Sign In Page ------*/
 
