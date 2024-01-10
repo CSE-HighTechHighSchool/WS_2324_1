@@ -495,8 +495,8 @@ table th{
     display: flex;
     justify-content: center;
     align-items: center;
-	margin-bottom: 50px;
-	margin-left: 50px;
+	margin-bottom: 20px;
+	margin-left: 60px;
 	
 }
 
@@ -549,9 +549,86 @@ table th{
     max-width: 150%;
     object-fit: fill;
     padding-right: 50px;
-    margin-left: -22px;
+    margin-left: -12px;
     margin-top: -10px;
     padding-bottom: -50px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+<<<<<<< Updated upstream
+=======
+}
+
+/*--------Sign Up----------*/
+
+/* Centers regsiter form within the surrounding box */
+.signUpForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-left: 50px;
+	
+}
+
+h4{
+	font-size: 30px;
+	margin-left: 50px;
+}
+/* Sets margins, background color, and display for register form */
+.registerBox {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-top: 10px;
+    width: auto;
+    height: 430px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 20px;
+    box-shadow: 0px 0 31px 0px rgb(0 0 0 / 10%);
+}
+
+/* Creates a gradient background */
+.registerPage {
+    background-size: 100%;
+    background-image: linear-gradient(to right top, #051937, #004770, #007c9e, #00b4b7, #12ebb9);
+}
+
+/* Styles the "Sign Up" button */
+.registerBtn {
+    color: white;
+    background-color: rgb(31, 140, 179);
+    border-color: rgb(31, 140, 179);
+    border-width: 2px;
+}
+
+/* Changes the color when the button is hovered */
+.registerBtn:hover {
+    color: rgb(31, 140, 179);
+    background-color: rgb(238, 244, 246);
+    border-color: rgb(31, 140, 179);
+}
+
+/* Styles the "Already have an account?" button */
+.badge {
+    border-radius: 10px;
+    background-color: rgb(94, 105, 108) !important;
+}
+
+/* Changes the color when the button is hovered */
+.badge:hover{
+    background-color: rgb(203, 245, 255) !important;
+    color: rgb(5, 40, 53);
+}
+
+/* Styling for image next to register form */
+#kelly{  
+    max-width: 126%;
+    object-fit: fill;
+    padding-right: 50px;
+    margin-left: -22px;
+    margin-top: -10px;
+    padding-bottom: -30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+>>>>>>> Stashed changes
 }
