@@ -62,20 +62,26 @@
         </div>
     </nav>
 
-    <div class="container">
-        <br><h2 class="text-center">Account Registration</h2><br>
-    </div>
-
     <!--Sign Up -->
-    <div class="signUpForm mb-5">     
-        <form>
-            <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
-            <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
-            <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
-            <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
-            <button type = "button" id="submitData" name="submitData" class="btn btn-outline-primary mb-3 w-100">Register</button>
-            <a href="signIn.html" class="badge bg-secondary py-1 w-100">Already have an account?</a>
-        </form>
+    <div class="registerBox w-50 row">
+        <!-- Image next to form -->
+        <div class="col-lg-5">
+            <img src="img/monmouth-county-map.jpeg" class="img-fluid" id="monmouth-county" alt="Monmouth County">
+        </div>
+        <div class="col-lg-7">
+            <br><h4 class="text-center">Account Registration</h4><br>
+            <!--Register form -->
+            <div class="signUpForm mb-5">     
+                <form>
+                    <input type="text" placeholder="First Name" id="firstName" class="form-control mb-3">
+                    <input type="text" placeholder="Last Name" id="lastName" class="form-control mb-3">
+                    <input type="email" placeholder="Email" id="userEmail" class="form-control mb-3">
+                    <input type="password" placeholder="password" id="userPass" class="form-control mb-3">
+                    <button type = "button" id="submitData" name="submitData" class="btn btn-outline-primary mb-3 registerBtn w-100">Register</button>
+                    <a href="signIn.html" class="badge bg-secondary py-1 w-100" style="text-decoration: none;">Already have an account?</a> <!-- Redirects to signin.html-->
+                </form>
+            </div>
+        </div>
     </div>
     
     <div class="footer">
