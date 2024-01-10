@@ -153,16 +153,31 @@ h1, h2, h3, h4, h5, h6, p, a{ /*Set default font to Nunito font*/
 
 /*--------Terminology Page Styling --------*/
 .ovPadLeft { /*Left Padding for images on left*/
-    padding-left: 75px;
+    padding-left: 1vw;
 }
 .ovPadRight { /*Right padding for images on right*/
-    padding-right: 75px;
+    padding-right: 1vw;
 }
 .whole { /*Positiong and spacing properties for Terms page*/
-    padding-left: 200px;
-    padding-right: 75px;
+    padding-left: 13.5vw;
+    padding-right: 1.5vw;
 	align-items: center;
     justify-content: center;
+}
+.leadoverview-font {
+    font-size: calc(10px + 0.75vw);
+}
+.img-fluid {
+    width: calc(100px + 15vw);
+    height: calc(100px + 10vw);
+    align-items: center;
+    justify-content: center;
+}
+.ovPadLeft2 {
+    font-size: calc(15px + 3vw);
+}
+.ovPadRight2 {
+    font-size: calc(15px + 3vw);
 }
 
 
@@ -233,12 +248,13 @@ main { /*display is block style; auto margin; width is 80 viewport width*/
 	border-radius: 0.5em;
 	overflow: hidden;
 	font-family: 'Nunito-SemiBold';
-	font-size: 17px; 
+	font-size: 2vw;
 	display: grid;
 	grid-template-areas: "text img";
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 	align-items: stretch;
+    padding-top:10px
 }
 
 .card__content > div { /*card box content within div tags*/
@@ -403,8 +419,8 @@ p {
 /*--------------Line CSS----------*/
 .wrapper {
     position: relative;
-    width: 1100px;
-    height: 3600px;
+    width: 71vw;
+    height: auto;
 	border-style: none solid none solid;
 	border-color: #ccc;
 	border-width: 1px;
