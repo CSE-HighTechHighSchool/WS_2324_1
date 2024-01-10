@@ -12,6 +12,8 @@
             crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- Bootstrap 5, crypto-js and custom JS script tags-->
     <!-- Include 'defer' keyword for each to improve loading-->
@@ -55,7 +57,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link hover-underline-animation nbMenuItem">Tracker</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="signinbutton">
                         <a href="signIn.html" class="nav-link hover-underline-animation nbMenuItem">Sign In</a>
                     </li>
                 </ul>
@@ -65,20 +67,25 @@
 
 
     <div class="tracker-container">
+        <!-- Add data to Firebase-->
         <div class="add-data">
+            <!-- Add data to Firebase directions-->
             <h2>Add Sunrise & Sunset Times</h2>
             <ol class="list-group list-group-numbered notes">
                 <li class="list-group-item border-0">Select Date</li>
                 <li class="list-group-item border-0">Fill in Sunrise (1) and Sunset Times (2)</li>
                 <li class="list-group-item border-0">Click Add</li>
             </ol>
+            <!-- Add data to Firebase form-->
             <div class="data-form">
                 <form>
+                    <!-- Select Year -->
                     <select class="form-select" aria-label="Default select example" id="selectYear">
                         <option value="" disabled selected hidden>Year</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
                     </select>
+                    <!-- Select Month -->
                     <select class="form-select" aria-label="Default select example" id="selectMonth">
                         <option value="" disabled selected hidden>Month</option>
                         <option value="Jan">Jan</option>
@@ -94,6 +101,7 @@
                         <option value="Nov">Nov</option>
                         <option value="Dec">Dec</option>    
                     </select>
+                    <!-- Select Day -->
                     <select class="form-select" aria-label="Default select example" id="selectDay">
                         <option value="" disabled selected hidden>Day</option>
                         <option value="1">1</option>
@@ -128,25 +136,31 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
+                    <!-- Select Sunrise and Sunset Times -->
                     <input type="time" class="form-select" placeholder="Sunrise Time" id="sunrise">
                     <input type="time" class="form-select" placeholder="Sunset Time" id="sunset">
                     <button type="button" class="addBtn btn btn-outline-primary w-100" id="addBtn">Add Data</button>
                 </form>
             </div>
         </div>
+        <!-- Get Data from Firebase -->
         <div class="get-data">
             <h2>Get Sunrise & Sunset Time</h2>
+            <!-- Get Data from Firebase Directions-->
             <ol class="list-group list-group-numbered notes">
                 <li class="list-group-item border-0">Select Date</li>
                 <li class="list-group-item border-0">Click Get Data</li>
             </ol>
+            <!-- Get Data from Firebase Form-->
             <div class="data-form">
                 <form>
+                    <!-- Select Year -->
                     <select class="form-select" aria-label="Default select example" id="getYear">
                         <option value="" disabled selected hidden>Year</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
                     </select>
+                    <!-- Select Month -->
                     <select class="form-select" aria-label="Default select example" id="getMonth">
                         <option value="" disabled selected hidden>Month</option>
                         <option value="Jan">Jan</option>
@@ -162,6 +176,7 @@
                         <option value="Nov">Nov</option>
                         <option value="Dec">Dec</option>    
                     </select>
+                    <!-- Select Day -->
                     <select class="form-select" aria-label="Default select example" id="getDay">
                         <option value="" disabled selected hidden>Day</option>
                         <option value="1">1</option>
@@ -202,19 +217,24 @@
                 <h3 id="getSunset">Sunset: </h3>
             </div>
         </div>
+        <!-- Get Dataset from Firebase and Create Chart Section -->
         <div class="get-chart">
+            <!-- Get Dataset from Firebase and Create Chart Directions -->
             <h2>Get Sunrise & Sunset Time For a Month</h2>
                 <ol class="list-group list-group-numbered notes">
                     <li class="list-group-item border-0">Select Date</li>
                     <li class="list-group-item border-0">Click Generate Graph</li>
                 </ol>
+            <!-- Get Dataset from Firebase and Create Chart Form -->
             <div class="data-form">
                 <form>
+                    <!-- Selct Year -->
                     <select class="form-select" aria-label="Default select example" id="getYearChart">
                         <option value="" disabled selected hidden>Year</option>
                         <option value="2023">2023</option>
                         <option value="2024">2024</option>
                     </select>
+                    <!-- Selct Month -->
                     <select class="form-select" aria-label="Default select example" id="getMonthChart">
                         <option value="" disabled selected hidden>Month</option>
                         <option value="Jan">Jan</option>
@@ -233,21 +253,27 @@
                     <button type="button" class="btn btn-outline-primary w-100" id="getChart">Generate Chart</button>
                 </form>
             </div>
+             <!-- Chart JS -->
             <canvas id="myChart"></canvas>
         </div>
+        <!-- Remove Data from Firebase -->
         <div class="remove-data">
+             <!-- Remove Data from Directions -->
             <h2>Remove Sunrise & Sunset Time</h2>
             <ol class="list-group list-group-numbered notes">
                 <li class="list-group-item border-0">Select Date</li>
                 <li class="list-group-item border-0">Click Remove Data</li>
             </ol>
+             <!-- Remove Data from Form -->
             <div class="data-form">
             <form>
+                 <!-- Select Year -->
                 <select class="form-select" aria-label="Default select example" id="removeYear">
                     <option value="" disabled selected hidden>Year</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>
                 </select>
+                <!-- Select Month -->
                 <select class="form-select" aria-label="Default select example" id="removeMonth">
                     <option value="" disabled selected hidden>Month</option>
                     <option value="Jan">Jan</option>
@@ -263,6 +289,7 @@
                     <option value="Nov">Nov</option>
                     <option value="Dec">Dec</option>    
                 </select>
+                <!-- Select Day -->
                 <select class="form-select" aria-label="Default select example" id="removeDay">
                     <option value="" disabled selected hidden>Day</option>
                     <option value="1">1</option>
@@ -300,6 +327,31 @@
                 <button type="button" class="btn btn-outline-primary w-100" id="removeData">Remove Data</button>
             </form>
         </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="inner_footer">
+            <div class="sitelogo_container">
+                <img src="img/sitelogo.png">
+            </div>
+            <div class="footer_three">
+                <h1>Other Pages</h1>
+                <a href="index.html"style="text-decoration:none">Home Page</a>
+                <a href="terms.html"style="text-decoration:none">Terminology</a>
+                <a href="meteorologists.html"style="text-decoration:none">Meteorologists</a>
+                <a href="signIn.html"style="text-decoration:none">Sign In</a>
+
+            </div>
+            <div class="footer_three">
+                <h1>Follow Us</h1>
+                <li><a href="https://www.facebook.com/NOAA/"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/NOAA"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/noaa/"><i class="fa-brands fa-instagram"></i></a></li>
+                <span>
+                    Copyright &copy; S.P.A 2023
+                </span>
+            </div>
         </div>
     </div>
 </body>

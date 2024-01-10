@@ -26,11 +26,6 @@ const auth = getAuth(app)
 // Returns instace of your app's FRD
 const db = getDatabase(app)
 
-// --------------------- Get reference values -----------------------------
-
-let userLink = document.getElementById("userLink") // username for the navbar
-let signOutLink = document.getElementById("signOut") //sign out link
-let welcome = document.getElementById("welcome") // welcome header
 let currentUser = null // initialize currentUser to null
 
 // ----------------------- Get User's Name'Name ------------------------------
@@ -54,18 +49,12 @@ function SignOutUser(){
   sessionStorage.removeItem("user")
   localStorage.removeItem("user")
   localStorage.removeItem("keepLoggedIn")
-
-  signOutLink(auth).then(() => {
-    //Sign out successful
-  }).catch((err) => {
-    //error occured
-  })
-  
+  alert("Signed Out!")
   window.location = "index.html"
 }
 
 
-// ------------------------Set (insert) data into FRD ------------------------
+// ------------------------Set or Update (insert) data into FRD ------------------------
 function setData(userID, year, month, day, sunrise, sunset) {
   const dataRef = ref(db, `users/${userID}/data/${year}/${month}/${day}`)
   if (!year || !month || !day) {
@@ -147,6 +136,8 @@ async function getDataSet(userID, year, month){
     alert("Year and month are required.")
     return;
   }
+
+  // Define arrays
   const days = []
   const sunrises = []
   const sunsets = []
@@ -166,8 +157,10 @@ async function getDataSet(userID, year, month){
         console.log(sunrises)
         console.log(sunsets)
       })
+      //Create chart
       createLineChart(days, sunrises, sunsets)
     }
+    //Print errors 
     else {
       alert("No data found")
     }
@@ -277,15 +270,19 @@ function deleteData(userID, year, month, day) {
 
 // --------------------------- Home Page Loading -----------------------------
 window.onload = function(){
-  // ------------------------- Set Welcome Message -------------------------
   getUsername()
+    console.log(currentUser)
     // Check if user is signed-in
     if(currentUser === null) {
       window.location = "index.html"
       alert("Please Sign-In First!")
     }
+    //Changes sign-in to sign-out
+    else {
+      document.getElementById('signinbutton').innerHTML='<button class = "hover-underline-animation" id="signoutlink">Sign Out</button>'
+    }
 }
-  // Get, Set, Update, Delete Sharkriver Temp. Data in FRD
+  // Get, Set, Delete Sunsrise and Sunset Data in FRD
   // Set (Insert) data function call
   document.getElementById("addBtn").onclick = function(){
     const year = document.getElementById("selectYear").value
@@ -324,4 +321,11 @@ window.onload = function(){
     const day = document.getElementById("removeDay").value
     const userID = currentUser.uid
     deleteData(userID, year, month, day)
+  }
+
+  // Sign out user
+  document.getElementById('signinbutton').onclick = function() {
+    if(!(currentUser === null)) {
+      SignOutUser()
+    }
   }
